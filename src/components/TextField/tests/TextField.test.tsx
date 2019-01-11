@@ -317,7 +317,7 @@ describe('<TextField />', () => {
         />,
       );
 
-      const characterCount = textField.find('#MyField-character-counter');
+      const characterCount = textField.find('#MyFieldCharacterCounter');
 
       expect(characterCount.text()).toBe('4');
     });
@@ -334,7 +334,7 @@ describe('<TextField />', () => {
         />,
       );
 
-      const characterCount = textField.find('#MyField-character-counter');
+      const characterCount = textField.find('#MyFieldCharacterCounter');
 
       expect(characterCount.text()).toBe('6');
     });

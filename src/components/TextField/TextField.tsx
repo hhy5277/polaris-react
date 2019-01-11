@@ -212,7 +212,7 @@ class TextField extends React.PureComponent<CombinedProps, State> {
       </div>
     ) : null;
 
-    const characterCount = maxLength ? maxLength - value.length : value.length;
+    const characterCount = value.length;
     const characterCountLabel = intl.translate(
       maxLength
         ? 'Polaris.TextField.characterCountWithMaxLength'
@@ -223,18 +223,22 @@ class TextField extends React.PureComponent<CombinedProps, State> {
     const characterCountClassName = classNames(
       styles.CharacterCount,
       multiline && styles.FlexEnd,
-      maxLength && characterCount === 0 && styles.MaxCharacters,
+      // maxLength && characterCount === 0 && styles.MaxCharacters,
     );
+
+    const characterCountText = !maxLength
+      ? characterCount
+      : `${characterCount}/${maxLength}`;
 
     const characterCountMarkup = showCharacterCount ? (
       <div
-        id={`${id}-character-counter`}
+        id={`${id}CharacterCounter}`}
         className={characterCountClassName}
         aria-label={characterCountLabel}
         aria-live="polite"
         aria-atomic="true"
       >
-        {characterCount}
+        {characterCountText}
       </div>
     ) : null;
 
@@ -266,7 +270,7 @@ class TextField extends React.PureComponent<CombinedProps, State> {
       describedBy.push(helpTextID(id));
     }
     if (showCharacterCount) {
-      describedBy.push(`${id}-character-counter`);
+      describedBy.push(`${id}CharacterCounter`);
     }
 
     const labelledBy = [labelID(id)];
