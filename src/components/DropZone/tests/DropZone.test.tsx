@@ -334,7 +334,7 @@ function setBoundingClientRect(size: keyof typeof widths) {
   Element.prototype.getBoundingClientRect = jest.fn(() => {
     return {
       width: widths[size],
-      height: 100,
+      height: widths[size],
       top: 0,
       left: 0,
       bottom: 0,

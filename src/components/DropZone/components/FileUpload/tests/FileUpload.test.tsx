@@ -7,7 +7,7 @@ import FileUpload from '../FileUpload';
 describe('<FileUpload />', () => {
   it('renders large view', () => {
     const fileUpload = mountWithAppProvider(
-      <Provider value={{size: 'large', type: 'file'}}>
+      <Provider value={{width: 'large', type: 'file'}}>
         <FileUpload />
       </Provider>,
     );
@@ -19,7 +19,7 @@ describe('<FileUpload />', () => {
 
   it('renders medium view', () => {
     const fileUpload = mountWithAppProvider(
-      <Provider value={{size: 'medium', type: 'file'}}>
+      <Provider value={{width: 'medium', type: 'file'}}>
         <FileUpload />
       </Provider>,
     );
@@ -30,7 +30,7 @@ describe('<FileUpload />', () => {
 
   it('renders small view', () => {
     const fileUpload = mountWithAppProvider(
-      <Provider value={{size: 'small', type: 'file'}}>
+      <Provider value={{width: 'small', type: 'file'}}>
         <FileUpload />
       </Provider>,
     );
