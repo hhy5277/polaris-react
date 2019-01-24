@@ -181,9 +181,9 @@ $stacking-order: (
   color: color('red');
 }
 
-.FlexEnd {
+.AlignFieldBottom {
   align-self: flex-end;
-  margin-bottom: rem(4px);
+  margin-bottom: spacing(extra-tight);
 }
 
 .Spinner {

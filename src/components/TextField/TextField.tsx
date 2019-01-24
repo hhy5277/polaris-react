@@ -222,8 +222,7 @@ class TextField extends React.PureComponent<CombinedProps, State> {
 
     const characterCountClassName = classNames(
       styles.CharacterCount,
-      multiline && styles.FlexEnd,
-      // maxLength && characterCount === 0 && styles.MaxCharacters,
+      multiline && styles.AlignFieldBottom,
     );
 
     const characterCountText = !maxLength
